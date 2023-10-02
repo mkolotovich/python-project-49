@@ -4,7 +4,7 @@ import prompt
 from random import randint
 
 def is_even(num):
-    return num % 2
+    return num % 2 == 0
 
 def main():
     name = brain_games.cli.welcome_user()
@@ -20,7 +20,13 @@ def main():
         elif (answer == 'no' and not is_even(random_number)):
             print("Correct!")
         else:
-            print(answer + " is wrong answer ;(. Correct answer was 'no'.")
+            if(answer == 'no'):
+                print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
+            else:
+                print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
+            print("Let's try again, Bill!")
+            return
+        count = count + 1
     print("Congratulations, " + name + "!")
 
 if __name__ == '__main__':
