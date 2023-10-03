@@ -2,16 +2,16 @@ import brain_games.src.index
 from random import randint
 
 
-def isEven(number):
+def is_even(number):
     return number % 2 == 0
 
 
-def generateGameData():
+def generate_game_data():
     question = randint(0, 20)
-    answer = 'yes' if isEven(question) else 'no'
+    answer = 'yes' if is_even(question) else 'no'
     return [question, answer]
 
 
-def startGame():
+def start_game():
     question = 'Answer "yes" if the number is even, otherwise answer "no".'
-    brain_games.src.index.playGame(question, generateGameData)
+    brain_games.src.index.play_game(question, generate_game_data)
