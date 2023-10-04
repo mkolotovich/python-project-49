@@ -1,12 +1,17 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.7.0"
-description = ""
-authors = ["Mike Kolotovich"]
+description = "Set of 5 brain games for brain training."
+classifiers = [
+    "Operating System :: Windows",
+    "Operating System :: POSIX :: Linux"
+]
+authors = ["Mike Kolotovich <k2punk@gmail.com>",]
 readme = "README.md"
 packages = [
   { include = "brain_games" },
 ]
+repository = "https://github.com/mkolotovich/python-project-49"
 
 [tool.poetry.dependencies]
 python = "^3.10"
