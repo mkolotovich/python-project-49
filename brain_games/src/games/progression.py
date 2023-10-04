@@ -29,7 +29,8 @@ def generate_game_data():
     for num in modifyed_numbers:
         question = f'{question} {num}'
     answer = str(progression[random_index])
-    return [question, answer]
+    sliced_question = question[1:]
+    return [sliced_question, answer]
 
 
 def start_game():
