@@ -19,7 +19,7 @@ def generate_game_data():
     step = 2
     progression = make_progression(progression_start, step, min_length)
     modifyed_numbers = progression[:]
-    random_index = randint(0, len(progression))
+    random_index = randint(0, len(progression) - 1)
     modifyed_numbers[random_index] = '..'
     question = ''
     for num in modifyed_numbers:
