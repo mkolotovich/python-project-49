@@ -9,7 +9,7 @@ def play_game(question, generate_round_data):
     win_answers_count = 3
     print(question)
     while (correct_answers_count < win_answers_count):
-        [round_question, r_ans] = generate_round_data()
+        round_question, r_ans = generate_round_data()
         print(f'Question: {round_question}')
         ans = prompt.string('Your answer: ')
         if (ans == r_ans):

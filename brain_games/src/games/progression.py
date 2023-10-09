@@ -1,4 +1,4 @@
-import brain_games.src.index
+import brain_games.src.engine
 from random import randint
 
 
@@ -17,11 +17,7 @@ def generate_game_data():
     min_length = 5
     progression_start = 5
     step = 2
-    length = 10
-    if (length > min_length):
-        progression = make_progression(progression_start, step, length)
-    else:
-        progression = make_progression(progression_start, step, min_length)
+    progression = make_progression(progression_start, step, min_length)
     modifyed_numbers = progression[:]
     random_index = randint(0, len(progression))
     modifyed_numbers[random_index] = '..'
@@ -35,4 +31,4 @@ def generate_game_data():
 
 def start_game():
     question = 'What number is missing in the progression?'
-    brain_games.src.index.play_game(question, generate_game_data)
+    brain_games.src.engine.play_game(question, generate_game_data)

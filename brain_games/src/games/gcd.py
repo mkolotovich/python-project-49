@@ -1,4 +1,4 @@
-import brain_games.src.index
+import brain_games.src.engine
 from random import randint
 
 
@@ -20,4 +20,4 @@ def generate_game_data():
 
 def start_game():
     question = 'Find the greatest common divisor of given numbers.'
-    brain_games.src.index.play_game(question, generate_game_data)
+    brain_games.src.engine.play_game(question, generate_game_data)
